@@ -26,3 +26,5 @@ yarn-error.log*
 settings.json
 records.json
 actors.json
+# Local Netlify folder
+.netlify
