@@ -19,7 +19,7 @@ const Hit = ({ hit }) => {
           <Card.Text>
             Genre: {hit.genre[0]}, {hit.genre[1]}
           </Card.Text>
-          <Card.Text>Rating: {hit.rating}</Card.Text>
+          <Card.Text>Score: {Math.floor(hit.score)}</Card.Text>
         </Card.Body>
       </Card>
     </Col>

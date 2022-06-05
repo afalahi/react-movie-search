@@ -112,6 +112,9 @@ li{
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
 }
+.ais-ClearRefinements-button {
+  padding:5px 10px 5px 10px
+}
 .ais-ClearRefinements-button--disabled {
   background: rgb(223, 221, 221);
   color: rgb(148, 145, 145);

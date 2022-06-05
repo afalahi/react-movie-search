@@ -42,6 +42,7 @@ const Search = () => {
                 { value: 'movies', label: 'Featured' },
                 { value: 'movie_sort', label: 'Rating Desc' },
                 { value: 'movie_year_desc', label: 'Year Desc' },
+                { value: 'movie_score_high', label: 'Score Asc' },
               ]}
             />
           </Col>
