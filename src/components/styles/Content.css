@@ -123,3 +123,48 @@ li {
 .ais-RefinementList-showMore:hover {
   background: #564ed1;
 }
+.ais-Pagination {
+  box-shadow: none;
+  border: none;
+  border-radius: initial;
+  padding: 0px;
+  -webkit-border-radius: initial;
+  -moz-border-radius: initial;
+  -ms-border-radius: initial;
+  -o-border-radius: initial;
+}
+
+.ais-Pagination-item {
+  display: inline-block;
+  padding: 0px;
+}
+
+.ais-Pagination-item + .ais-Pagination-item {
+  margin-left: 4px;
+}
+
+.ais-Pagination-item--disabled {
+  display: none;
+}
+
+.ais-Pagination-link {
+  display: block;
+  background: #635dff;
+  padding: 3px 8px;
+  color: #fff;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.ais-Pagination-item--selected .ais-Pagination-link {
+  background: #564ed1;
+}
+
+.ais-Pagination-link:hover {
+  text-decoration: none;
+  background: #564ed1;
+  color: #fff;
+}
