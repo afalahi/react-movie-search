@@ -8,10 +8,13 @@ import {
   ClearRefinements,
   RefinementList,
   Configure,
+  RatingMenu,
 } from 'react-instantsearch-dom';
-import { MovieList } from './components/MovieList';
 import { Container, Row, Col } from 'react-bootstrap';
-import { ToastContainer } from 'react-toastify';
+// import { ToastContainer } from 'react-toastify';
+
+import { MovieList } from './MovieList';
+import { Stats } from 'react-instantsearch-dom';
 
 const searchClient = algoliasearch(
   'TMPMXAV4QZ',
@@ -28,14 +31,17 @@ const Search = () => {
             translations={{ placeholder: 'Search IMDB Top List' }}
           />
         </header>
-        <ToastContainer
+        {/* <ToastContainer
           closeOnClick
           position='top-left'
           closeButton={false}
           limit={1}
-        />
-        <Row className='sort'>
-          <Col className='d-flex flex-row-reverse'>
+        /> */}
+        <Row>
+          <Col className='d-flex flex-row text-muted'>
+            <Stats />
+          </Col>
+          <Col className='d-flex flex-row-reverse sort'>
             <SortBy
               defaultRefinement='movies'
               items={[
@@ -49,25 +55,28 @@ const Search = () => {
         </Row>
       </Container>
       <Container>
-        <Col className='left-side mx-auto'>
-          <ClearRefinements />
-          <h2>Genre</h2>
-          <RefinementList
-            attribute='genre'
-            className='list-group'
-            {...refinementProps}
-          />
-          <h2>Year</h2>
-          <RefinementList
-            attribute='year'
-            className='list-group'
-            {...refinementProps}
-          />
-          <h2>Rating</h2>
-          <RefinementList attribute='rating' className='list-group rating' />
-          <Configure hitsPerPage={24} />
-        </Col>
+        <section>
+          <Col className='left-side mx-auto'>
+            <ClearRefinements />
+            <h2>Genre</h2>
+            <RefinementList
+              attribute='genre'
+              className='list-group'
+              {...refinementProps}
+            />
+            <h2>Year</h2>
+            <RefinementList
+              attribute='year'
+              className='list-group'
+              {...refinementProps}
+            />
+            <h2>Rating</h2>
+            <RatingMenu attribute='rating' className='list-group rating' />
+            <Configure hitsPerPage={24} />
+          </Col>
+        </section>
       </Container>
+
       <Container>
         <Row md={3}>
           <MovieList />
